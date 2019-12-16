@@ -1,2 +1,4 @@
 venv/**
 .idea/**
+web/mysite/**
+**/__pycache__
