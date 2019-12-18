@@ -18,6 +18,24 @@ def add_student(name, student_id =332) :
     students.append(xstudent)
 
 
+def save_file(student):
+    try:
+        f = open("students.txt", "a")
+        f.write(student+"\n")
+        f.close()
+    except Exception:
+        print("Could not save file")
+
+
+def read_file:
+    try:
+        f = open("students.txt", "r")
+        for student in f.readlines():
+            add_student(student)
+        f.close()
+    except Exception:
+        print("Could not read file")
+
 student_list = get_students_titlecase()
 end = False 
 res = True
