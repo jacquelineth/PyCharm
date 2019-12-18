@@ -16,18 +16,21 @@ def print_students_titlecase():
 def add_student(name, student_id =332) :
     xstudent = {"name": name, "student_id": student_id}
     students.append(xstudent)
+    save_file(xstudent)
 
 
 def save_file(student):
     try:
         f = open("students.txt", "a")
-        f.write(student+"\n")
+        f.write(student["name"]+"\n")
+        f.flush()
         f.close()
     except Exception:
         print("Could not save file")
 
 
-def read_file:
+
+def read_file():
     try:
         f = open("students.txt", "r")
         for student in f.readlines():
@@ -37,7 +40,9 @@ def read_file:
         print("Could not read file")
 
 student_list = get_students_titlecase()
-end = False 
+
+
+read_file()
 res = True
 
 while res:
@@ -46,6 +51,7 @@ while res:
         student_name = input("Enter student name: " )
         student_id = input("Enter student ID: " )
         add_student(student_name, student_id)
+       
     else:
         res= False
 
