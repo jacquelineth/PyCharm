@@ -4,7 +4,7 @@ student = {
     "feedback": None
 }
 try:
-    last_name= student.get("last_name") 
+    last_name= student["last_name"] 
 except KeyError:
     print("Error findng last_name")
        
