@@ -18,13 +18,13 @@ def add_student(name, student_id =332) :
     students.append(student)
 
 
-# varg Functions with Variable Argument Lists
-def var_args(name, *args):
+# varg Functions with *named *Variable Argument Lists
+def var_args(name, **kwargs):
     print(name)
-    print(args)
+    print(kwargs["description"],kwargs["feedback"] ,kwargs["pluralsight_Susbsccirber"] )
 
 
 student_list = get_students_titlecase()
 
 add_student("Mark")
-var_args("Mark", "Love Python ", None, "Hello", True)
+var_args("Mark", description="Love Python ", feedback= None, pluralsight_Susbsccirber= True)
