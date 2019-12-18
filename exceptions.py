@@ -3,6 +3,9 @@ student = {
     "student_id": 15163,
     "feedback": None
 }
-
-last_name= student.get("last_name", "Unknown") 
-print(last_name)
+try:
+    last_name= student.get("last_name") 
+except KeyError:
+    print("Error findng last_name")
+       
+print("Finished")
