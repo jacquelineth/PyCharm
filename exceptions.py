@@ -11,8 +11,9 @@ try:
     numbered_last_name= 3 + last_name
 except KeyError:
     print("Error findng last_name")
-except  TypeError:
+except  TypeError as error:
     print("I can't add these 2 together")
+    print(error)
 except Exception:
     print("Un")
 
