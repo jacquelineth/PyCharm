@@ -2,25 +2,34 @@ students = []
 
 
 class Student: 
+    #Clas Attribute
+    school_name= "Springfield Elementary"
+
     # Constructor
     ### Need __init__  and self parameter
     def __init__(self, name, student_id =332) :
-        xstudent = {"name": name, "student_id": student_id}
-        students.append(xstudent)
-        self.sName=name
-        self.__HName__= "private"
+        self.name=name
+        self.student_id=student_id
+        students.append(self)
+        
     
     # Public Attribut
-    sName = ""
-
-    # private Attribut
-    __HName__ = ""
+    # name = ""
 
     def __str__(self):
-        return super().__str__() + " Student :( " + self.sName + " )"
-
-student = Student("Mark")
+        return " Student :( " + self.name + " )"
 
 
-print(student)
-print(student.__HName__)
+    def get_name_capitalize(self) :
+        return self.name.capitalize()
+
+    def get_school_name(self):
+        return self.school_name
+
+mark = Student("mark")
+
+
+
+print(mark)
+print(mark.get_name_capitalize())
+print(Student.school_name)
