@@ -4,7 +4,7 @@ students = []
 def read_file():
     try:
         f = open("students.txt", "r")
-        for student in read_student(f):
+        for student in read_student(f): 
             students.append(student)
         f.close()
     except Exception:
