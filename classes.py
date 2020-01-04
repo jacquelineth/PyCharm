@@ -28,8 +28,11 @@ class Student:
 
 mark = Student("mark")
 
+# SubClass
+class HighSchoolStudent(Student):
+    
+    school_name = "Springfield High Scool"
 
 
-print(mark)
-print(mark.get_name_capitalize())
-print(Student.school_name)
+james = HighSchoolStudent("james")
+print(james.get_name_capitalize())
